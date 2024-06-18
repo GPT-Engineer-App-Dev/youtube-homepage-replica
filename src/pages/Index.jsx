@@ -7,7 +7,7 @@ const Index = () => {
       {/* Header */}
       <Flex as="header" align="center" justify="space-between" p={4} boxShadow="md">
         <Flex align="center">
-          <Image src="/public/images/youtube-logo.svg" alt="YouTube Logo" boxSize="40px" />
+          <Image src="/images/youtube-logo.svg" alt="YouTube Logo" boxSize="40px" />
           <Text fontSize="2xl" fontWeight="bold" ml={2}>YouTube</Text>
         </Flex>
         <Flex align="center" flex="1" maxW="600px" mx={4}>
