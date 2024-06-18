@@ -1,19 +1,36 @@
-// Update this page (the content is just a fallback if you fail and example)
-// Use chakra-ui
-import { Container, Text, VStack } from "@chakra-ui/react";
-
-// Example of using react-icons
-// import { FaRocket } from "react-icons/fa";
-// <IconButton aria-label="Add" icon={<FaRocket />} size="lg" />; // IconButton would also have to be imported from chakra
+import { Box, Flex, Image, Input, IconButton, VStack, Text } from "@chakra-ui/react";
+import { FaSearch, FaMicrophone, FaVideo, FaTh, FaBell, FaUserCircle } from "react-icons/fa";
 
 const Index = () => {
   return (
-    <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
-      <VStack spacing={4}>
-        <Text fontSize="2xl">Your Blank Canvas</Text>
-        <Text>Chat with the agent to start making edits.</Text>
-      </VStack>
-    </Container>
+    <Box>
+      {/* Header */}
+      <Flex as="header" align="center" justify="space-between" p={4} boxShadow="md">
+        <Flex align="center">
+          <Image src="/images/youtube-logo.png" alt="YouTube Logo" boxSize="40px" />
+          <Text fontSize="2xl" fontWeight="bold" ml={2}>YouTube</Text>
+        </Flex>
+        <Flex align="center" flex="1" maxW="600px" mx={4}>
+          <Input placeholder="Search" />
+          <IconButton aria-label="Search" icon={<FaSearch />} ml={2} />
+          <IconButton aria-label="Voice Search" icon={<FaMicrophone />} ml={2} />
+        </Flex>
+        <Flex align="center">
+          <IconButton aria-label="Create" icon={<FaVideo />} mx={2} />
+          <IconButton aria-label="Apps" icon={<FaTh />} mx={2} />
+          <IconButton aria-label="Notifications" icon={<FaBell />} mx={2} />
+          <IconButton aria-label="User" icon={<FaUserCircle />} mx={2} />
+        </Flex>
+      </Flex>
+
+      {/* Main Content */}
+      <Box as="main" p={4}>
+        <VStack spacing={4}>
+          <Text fontSize="2xl">Welcome to YouTube</Text>
+          <Text>Explore videos, channels, and more.</Text>
+        </VStack>
+      </Box>
+    </Box>
   );
 };
 
